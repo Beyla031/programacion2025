@@ -1,6 +1,5 @@
+import mysql.connector
 def conectar(consulta_sql):
-    #Módulo para conectar con base de datos SQL
-    import mysql.connector
  
 
 #Configuración de la conexión/ credenciales
@@ -18,7 +17,7 @@ def conectar(consulta_sql):
        conexion = mysql.connector.connect(**config)
        print("Conexión exitosa a la base de datos.")
 
-    #Objeto para crear consultas
+      #Objeto para crear consultas
        consultas = conexion.cursor()
 
        #Función para agregar la consulta SQL
