@@ -23,7 +23,7 @@ def form_view(ventana):
     boton.pack(pady=5)
 
     #HORA
-    titulo = tkinter.Label(formulario_panel, text="Filtrar por hora (rango)")
+    titulo = tkinter.Label(formulario_panel, text="Filtrar por hora")
     titulo.pack(pady=5)
 
     entry_hora1 = tkinter.Entry(formulario_panel)
