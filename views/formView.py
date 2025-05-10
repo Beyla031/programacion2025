@@ -53,7 +53,7 @@ def form_view(ventana):
         consulta = f"SELECT * FROM datos_generales WHERE hora_entrada BETWEEN '{h1_formato}' AND '{h2_formato}'"
         actualizarTabla(consulta, tabla_panel)
 
-    boton_hora = tkinter.Button(formulario_panel, text="Filtrar hora", command=filtrar_por_hora)
+    boton_hora = tkinter.Button(formulario_panel, text="Enviar", command=filtrar_por_hora)
     boton_hora.pack(pady=5)
 
 
