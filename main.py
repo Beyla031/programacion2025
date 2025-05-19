@@ -2,6 +2,7 @@
 import tkinter
 from views.headerView import header_view
 from views.formView import form_view
+from views.entrada import entrada_view
 
 # Nombramos nuestra variable e importamos la librería e 
 # utilizamos "tk" para crear una ventana 
@@ -18,6 +19,10 @@ ventana.rowconfigure(1, weight=4)
 
 #Paneles de la ventana 
 header_view(ventana)
-form_view(ventana)
+#form_view(ventana)
+entrada_view(ventana)
+
+
+
 
 ventana.mainloop()
