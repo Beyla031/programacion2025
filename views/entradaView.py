@@ -14,7 +14,7 @@ def entrada_view(ventana):
     entradas = {}
 
     for campo in campos:
-        label = tk.Label(formulario_entrada, text=campo, bg="black", fg="white", font=("Courier New", 10), width=20)
+        label = tk.Label(formulario_entrada, text=campo, bg="grey", fg="white", font=("Courier New", 10), width=20)
         label.pack(pady=(8, 0))
         entry = tk.Entry(formulario_entrada, font=("Courier New", 10), width=22)
         entry.pack(pady=(0, 5))
