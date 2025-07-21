@@ -1,0 +1,70 @@
+Pasos para Crear un Sitio Web con Python y Flask
+
+1. Instalar Python
+Asegúrate de tener Python instalado en tu computadora. Puedes verificarlo en la terminal con el comando:
+python --version
+
+2. Crear una carpeta para tu proyecto
+Esto te ayudará a mantener todos los archivos organizados. Por ejemplo:
+mkdir mi_sitio
+cd mi_sitio
+
+3. Crear un entorno virtual (opcional, pero recomendable)
+Esto crea un entorno aislado para tu proyecto:
+python -m venv venv
+En Linux/Mac: source venv/bin/activate
+En Windows: venv\Scripts\activate
+
+4. Instalar Flask
+Flask es el microframework que usaremos. Instálalo con:
+pip install flask
+
+5. Crear tu primer archivo Python
+Crea un archivo llamado app.py y escribe el siguiente código:
+
+from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def inicio():
+    return '¡Hola, este es mi sitio web con Flask!'
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+6. Ejecutar el servidor
+En la terminal, escribe:
+python app.py
+Luego abre el navegador y visita:
+http://127.0.0.1:5000/
+
+7. Agregar plantillas HTML (opcional pero recomendable)
+Crea una carpeta llamada 'templates' y dentro coloca archivos .html. Por ejemplo, templates/inicio.html con este contenido:
+
+<!DOCTYPE html>
+<html>
+<head><title>Inicio</title></head>
+<body>
+<h1>Bienvenido a mi sitio web con Flask</h1>
+</body>
+</html>
+
+8. Usar render_template en app.py
+Modifica app.py para usar la plantilla HTML:
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def inicio():
+    return render_template('inicio.html')
+
+9. (Opcional) Agregar estilos CSS
+Crea una carpeta llamada 'static' y coloca ahí archivos como estilos.css. En tu HTML usa:
+<link rel='stylesheet' href='{{ url_for('static', filename='estilos.css') }}'>
+
+10. Agregar más rutas
+Puedes crear más páginas agregando más funciones con @app.route. Ejemplo:
+
+@app.route('/acerca')
+def acerca():
+    return '<h2>Acerca de nosotros</h2>'
